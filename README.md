@@ -9,27 +9,27 @@ version: WiP 1.0
 
 ### features
 
--Visual
-  -ESP
-  -Chams
-  -Thirdperson
--Aim
-  -Silent
-  -PSilent
-  -Autofire
-  -Autoscope
-  -Autostop
-  >default aimbot on work
--Weapon
-  -No spread
-  -No recoil
--Movement
-  -Fly
-  -BunnyHop
-  -Autostrafe
--Antiaims
-  >Currently only Visual
-  >Only static, jitter not works
+- Visual
+  - ESP
+  - Chams
+  - Thirdperson
+- Aim
+  - Silent
+  - PSilent
+  - Autofire
+  - Autoscope
+  - Autostop
+  > default aimbot on work
+- Weapon
+  - No spread
+  - No recoil
+- Movement
+  - Fly
+  - BunnyHop
+  - Autostrafe
+- Antiaims
+  > Currently only Visual
+  > Only static, jitter not works
 
 # Support
 
