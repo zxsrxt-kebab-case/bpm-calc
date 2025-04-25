@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="launcher|Win32">
+      <Configuration>launcher</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="launcher|x64">
+      <Configuration>launcher</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="steam|Win32">
+      <Configuration>steam</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="steam|x64">
+      <Configuration>steam</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8b79af77-e3d7-4f52-adcd-75895db15f0a}</ProjectGuid>
+    <RootNamespace>blockpostmobiletemplate</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>cheat</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='steam|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='launcher|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <SpectreMitigation>Spectre</SpectreMitigation>
+    <EnableASAN>false</EnableASAN>
+    <EnableFuzzer>false</EnableFuzzer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='steam|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <SpectreMitigation>Spectre</SpectreMitigation>
+    <EnableASAN>false</EnableASAN>
+    <EnableFuzzer>false</EnableFuzzer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='launcher|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <SpectreMitigation>Spectre</SpectreMitigation>
+    <EnableASAN>false</EnableASAN>
+    <EnableFuzzer>false</EnableFuzzer>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='steam|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='launcher|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='steam|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='launcher|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\build\</OutDir>
+    <LibraryPath>E:\projects\blockpost_mobile_template\blockpost_mobile_template\minhook\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)\build\</OutDir>
+    <IntDir>$(Platform)\build\artifacts\</IntDir>
+    <TargetName>launcher_ver</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='steam|x64'">
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)\build\</OutDir>
+    <IntDir>$(Platform)\build\artifacts\</IntDir>
+    <TargetName>steam_ver</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='launcher|x64'">
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)\build\</OutDir>
+    <IntDir>$(Platform)\build\artifacts\</IntDir>
+    <TargetName>launcher_ver</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BLOCKPOSTMOBILETEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BLOCKPOSTMOBILETEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='steam|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BLOCKPOSTMOBILETEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='launcher|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;BLOCKPOSTMOBILETEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;BLOCKPOSTMOBILETEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeaderOutputFile />
+      <CallingConvention>FastCall</CallingConvention>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BLOCKPOSTMOBILETEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PrecompiledHeaderOutputFile />
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <CreateHotpatchableImage>false</CreateHotpatchableImage>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <CallingConvention>FastCall</CallingConvention>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <BuildStlModules>true</BuildStlModules>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='steam|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BLOCKPOSTMOBILETEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);STEAM</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <CreateHotpatchableImage>false</CreateHotpatchableImage>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <CallingConvention>FastCall</CallingConvention>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <BuildStlModules>true</BuildStlModules>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='launcher|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;BLOCKPOSTMOBILETEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);LAUNCHER</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <CreateHotpatchableImage>false</CreateHotpatchableImage>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <CallingConvention>FastCall</CallingConvention>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <BuildStlModules>true</BuildStlModules>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="aim.cpp" />
+    <ClCompile Include="animation.cpp" />
+    <ClCompile Include="c_camera.cpp" />
+    <ClCompile Include="elements.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="il2cpp_assembly.cpp" />
+    <ClCompile Include="il2cpp_class.cpp" />
+    <ClCompile Include="il2cpp_field.cpp" />
+    <ClCompile Include="il2cpp_image.cpp" />
+    <ClCompile Include="il2cpp_method.cpp" />
+    <ClCompile Include="mmath.cpp" />
+    <ClCompile Include="render_queue.cpp" />
+    <ClCompile Include="silent_aim.cpp" />
+    <ClCompile Include="bunnyhop.cpp" />
+    <ClCompile Include="chams.cpp" />
+    <ClCompile Include="dx_hook.cpp" />
+    <ClCompile Include="enemy_chams.cpp" />
+    <ClCompile Include="esp.cpp" />
+    <ClCompile Include="flyhack.cpp" />
+    <ClCompile Include="fonts.cpp" />
+    <ClCompile Include="il2cpp.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_demo.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_tables.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="imgui\impl\imgui_impl_dx11.cpp" />
+    <ClCompile Include="imgui\impl\imgui_impl_win32.cpp" />
+    <ClCompile Include="info.cpp" />
+    <ClCompile Include="local_chams.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mem.cpp" />
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="minhook\src\buffer.c" />
+    <ClCompile Include="minhook\src\hde\hde32.c" />
+    <ClCompile Include="minhook\src\hde\hde64.c" />
+    <ClCompile Include="minhook\src\hook.c" />
+    <ClCompile Include="minhook\src\trampoline.c" />
+    <ClCompile Include="constants.cpp" />
+    <ClCompile Include="no_recoil.cpp" />
+    <ClCompile Include="plh_move_hook.cpp" />
+    <ClCompile Include="plh_update_hook.cpp" />
+    <ClCompile Include="raycast_hook.cpp" />
+    <ClCompile Include="render.cpp" />
+    <ClCompile Include="send_pos_hook.cpp" />
+    <ClCompile Include="string.cpp" />
+    <ClCompile Include="thirdperson.cpp" />
+    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="vars.cpp" />
+    <ClCompile Include="visual.cpp" />
+    <ClCompile Include="weapons.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aim.hpp" />
+    <ClInclude Include="animation.hpp" />
+    <ClInclude Include="antiaims.hpp" />
+    <ClInclude Include="common.hpp" />
+    <ClInclude Include="c_array.hpp" />
+    <ClInclude Include="bunnyhop.hpp" />
+    <ClInclude Include="chams.hpp" />
+    <ClInclude Include="c_base_item_info.hpp" />
+    <ClInclude Include="c_camera.hpp" />
+    <ClInclude Include="c_collider.hpp" />
+    <ClInclude Include="c_component.hpp" />
+    <ClInclude Include="c_controll.hpp" />
+    <ClInclude Include="c_controlltouch.hpp" />
+    <ClInclude Include="c_example_camera.hpp" />
+    <ClInclude Include="c_example_character.hpp" />
+    <ClInclude Include="c_example_player.hpp" />
+    <ClInclude Include="c_game_object.hpp" />
+    <ClInclude Include="c_kinematic_character.hpp" />
+    <ClInclude Include="c_material.hpp" />
+    <ClInclude Include="c_object.hpp" />
+    <ClInclude Include="c_player_data.hpp" />
+    <ClInclude Include="c_player_object.hpp" />
+    <ClInclude Include="c_renderer.hpp" />
+    <ClInclude Include="c_shader.hpp" />
+    <ClInclude Include="c_shooter.hpp" />
+    <ClInclude Include="c_transform.hpp" />
+    <ClInclude Include="c_type.hpp" />
+    <ClInclude Include="dx_hook.hpp" />
+    <ClInclude Include="elements.hpp" />
+    <ClInclude Include="entity.hpp" />
+    <ClInclude Include="esp.hpp" />
+    <ClInclude Include="flyhack.hpp" />
+    <ClInclude Include="fonts.hpp" />
+    <ClInclude Include="fonts_data.hpp" />
+    <ClInclude Include="il2cpp.hpp" />
+    <ClInclude Include="il2cpp_assembly.hpp" />
+    <ClInclude Include="il2cpp_class.hpp" />
+    <ClInclude Include="il2cpp_field.hpp" />
+    <ClInclude Include="il2cpp_header.hpp" />
+    <ClInclude Include="il2cpp_icall.hpp" />
+    <ClInclude Include="il2cpp_image.hpp" />
+    <ClInclude Include="il2cpp_method.hpp" />
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\impl\imgui_impl_dx11.h" />
+    <ClInclude Include="imgui\impl\imgui_impl_win32.h" />
+    <ClInclude Include="imgui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\imstb_textedit.h" />
+    <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="info.hpp" />
+    <ClInclude Include="list.hpp" />
+    <ClInclude Include="mem.hpp" />
+    <ClInclude Include="menu.hpp" />
+    <ClInclude Include="minhook\mh.h" />
+    <ClInclude Include="minhook\src\buffer.h" />
+    <ClInclude Include="minhook\src\hde\hde32.h" />
+    <ClInclude Include="minhook\src\hde\hde64.h" />
+    <ClInclude Include="minhook\src\hde\pstdint.h" />
+    <ClInclude Include="minhook\src\hde\table32.h" />
+    <ClInclude Include="minhook\src\hde\table64.h" />
+    <ClInclude Include="minhook\src\trampoline.h" />
+    <ClInclude Include="constants.hpp" />
+    <ClInclude Include="mmath.hpp" />
+    <ClInclude Include="plh_move_hook.hpp" />
+    <ClInclude Include="plh_update_hook.hpp" />
+    <ClInclude Include="raycast_hook.hpp" />
+    <ClInclude Include="render.hpp" />
+    <ClInclude Include="render_queue.hpp" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="send_pos_hook.hpp" />
+    <ClInclude Include="string.hpp" />
+    <ClInclude Include="thirdperson.hpp" />
+    <ClInclude Include="utils.hpp" />
+    <ClInclude Include="vars.hpp" />
+    <ClInclude Include="vec3.hpp" />
+    <ClInclude Include="vec4.hpp" />
+    <ClInclude Include="weapons.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="minhook\src\dll_res\MinHook.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="cheat.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

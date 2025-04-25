@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>deps\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_demo.cpp">
+      <Filter>deps\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>deps\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_tables.cpp">
+      <Filter>deps\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_widgets.cpp">
+      <Filter>deps\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\impl\imgui_impl_dx11.cpp">
+      <Filter>deps\imgui\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\impl\imgui_impl_win32.cpp">
+      <Filter>deps\imgui\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="dx_hook.cpp">
+      <Filter>src\hooks\dx</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\src\buffer.c">
+      <Filter>deps\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\src\hook.c">
+      <Filter>deps\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\src\trampoline.c">
+      <Filter>deps\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\src\hde\hde32.c">
+      <Filter>deps\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\src\hde\hde64.c">
+      <Filter>deps\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Filter>src\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="esp.cpp">
+      <Filter>src\features\esp</Filter>
+    </ClCompile>
+    <ClCompile Include="silent_aim.cpp">
+      <Filter>src\features\aim</Filter>
+    </ClCompile>
+    <ClCompile Include="vars.cpp">
+      <Filter>src\variables</Filter>
+    </ClCompile>
+    <ClCompile Include="il2cpp.cpp">
+      <Filter>src\il2cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="info.cpp">
+      <Filter>src\info</Filter>
+    </ClCompile>
+    <ClCompile Include="mem.cpp">
+      <Filter>src\mem</Filter>
+    </ClCompile>
+    <ClCompile Include="render.cpp">
+      <Filter>src\features\esp</Filter>
+    </ClCompile>
+    <ClCompile Include="fonts.cpp">
+      <Filter>src\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="raycast_hook.cpp">
+      <Filter>src\hooks\raycast</Filter>
+    </ClCompile>
+    <ClCompile Include="flyhack.cpp">
+      <Filter>src\features\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="bunnyhop.cpp">
+      <Filter>src\features\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="constants.cpp">
+      <Filter>src\constants</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdperson.cpp">
+      <Filter>src\features\thirdperson</Filter>
+    </ClCompile>
+    <ClCompile Include="plh_update_hook.cpp">
+      <Filter>src\hooks\plh</Filter>
+    </ClCompile>
+    <ClCompile Include="visual.cpp">
+      <Filter>src\features\antiaims</Filter>
+    </ClCompile>
+    <ClCompile Include="plh_move_hook.cpp">
+      <Filter>src\hooks\plh</Filter>
+    </ClCompile>
+    <ClCompile Include="send_pos_hook.cpp">
+      <Filter>src\hooks\client</Filter>
+    </ClCompile>
+    <ClCompile Include="weapons.cpp">
+      <Filter>src\features\weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="no_recoil.cpp">
+      <Filter>src\features\weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="local_chams.cpp">
+      <Filter>src\features\chams</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy_chams.cpp">
+      <Filter>src\features\chams</Filter>
+    </ClCompile>
+    <ClCompile Include="chams.cpp">
+      <Filter>src\features\chams</Filter>
+    </ClCompile>
+    <ClCompile Include="aim.cpp">
+      <Filter>src\features\aim</Filter>
+    </ClCompile>
+    <ClCompile Include="c_camera.cpp">
+      <Filter>src\sdk\unity\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="string.cpp">
+      <Filter>src\sdk\unity\string</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>src\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="mmath.cpp">
+      <Filter>src\mmath</Filter>
+    </ClCompile>
+    <ClCompile Include="il2cpp_assembly.cpp">
+      <Filter>src\il2cpp\il2cpp_assembly</Filter>
+    </ClCompile>
+    <ClCompile Include="il2cpp_class.cpp">
+      <Filter>src\il2cpp\il2cpp_class</Filter>
+    </ClCompile>
+    <ClCompile Include="il2cpp_field.cpp">
+      <Filter>src\il2cpp\il2cpp_field</Filter>
+    </ClCompile>
+    <ClCompile Include="il2cpp_image.cpp">
+      <Filter>src\il2cpp\il2cpp_image</Filter>
+    </ClCompile>
+    <ClCompile Include="il2cpp_method.cpp">
+      <Filter>src\il2cpp\il2cpp_method</Filter>
+    </ClCompile>
+    <ClCompile Include="render_queue.cpp">
+      <Filter>src\features\esp</Filter>
+    </ClCompile>
+    <ClCompile Include="elements.cpp">
+      <Filter>src\menu\custom</Filter>
+    </ClCompile>
+    <ClCompile Include="animation.cpp">
+      <Filter>src\menu\custom</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{237b6b1f-a808-46a8-8742-0156ecccb281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features">
+      <UniqueIdentifier>{6f1c7ff2-f043-4da4-9bc6-bffdfb9cb814}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deps">
+      <UniqueIdentifier>{f7b7ff30-207a-432f-9406-9bb9b6386e7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deps\imgui">
+      <UniqueIdentifier>{bfae1133-1739-4a2d-8975-bf55681dc993}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deps\minhook">
+      <UniqueIdentifier>{8a1a4609-54bf-4267-944c-d90a29c9f193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deps\imgui\impl">
+      <UniqueIdentifier>{272bcbfd-0650-42e1-9bcd-7f565b36fee2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\menu">
+      <UniqueIdentifier>{f621f40a-08fd-42ae-8b9d-6cb90dcf929a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hooks">
+      <UniqueIdentifier>{e5a9815a-1192-4ba3-89d7-225d00997b9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hooks\dx">
+      <UniqueIdentifier>{4d4b6f30-5f48-45e5-9ad5-044dd95f3eab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deps\minhook\src">
+      <UniqueIdentifier>{9fac44fb-f9cb-43af-9d9e-d778189df64f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\esp">
+      <UniqueIdentifier>{315d4016-4379-42aa-970d-e2f2a2290c7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\aim">
+      <UniqueIdentifier>{78d074be-4eb1-4902-8c80-98d279adfa25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\variables">
+      <UniqueIdentifier>{db5c7291-ee91-4bbc-967e-da19582b7e02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\il2cpp">
+      <UniqueIdentifier>{69e537e0-8f5f-48d6-90a9-377c08f91fac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk">
+      <UniqueIdentifier>{c78791bd-efaa-44c2-9e44-e99c6d2aecc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\game">
+      <UniqueIdentifier>{d414a277-41ac-4bec-a9bf-e5e22061b7c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity">
+      <UniqueIdentifier>{f4170978-474c-4de0-b345-aa93f6e6b1cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\info">
+      <UniqueIdentifier>{70f0cc66-d45e-40f0-a349-22e74e742627}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mem">
+      <UniqueIdentifier>{5ecd891f-411c-463e-853f-8326e5697b1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\fonts">
+      <UniqueIdentifier>{713af7a4-4817-4259-9e13-cc2e1d87a810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{cb46650a-10fd-46a6-bc34-44e9447250ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\movement">
+      <UniqueIdentifier>{f7cb4eb7-2fba-4ce1-882d-3b074f525d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hooks\raycast">
+      <UniqueIdentifier>{74a74864-156b-4ff2-861b-ddc98c07aa37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\thirdperson">
+      <UniqueIdentifier>{c7e04331-b9c2-4fd5-a93c-2a097413dd94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hooks\plh">
+      <UniqueIdentifier>{96a78e57-5e8e-4ded-84bf-8010a680e9ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\antiaims">
+      <UniqueIdentifier>{b5f432fa-d637-4670-901e-de9d11bedcc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hooks\client">
+      <UniqueIdentifier>{83885bb3-649d-4214-bc1a-e43df039fb33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\constants">
+      <UniqueIdentifier>{6cb6d126-9594-4623-8377-c478da3755d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\weapon">
+      <UniqueIdentifier>{b46838b2-f293-4be7-a8a6-0fc72e429250}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\chams">
+      <UniqueIdentifier>{99e29f09-de90-4b0a-bace-e0a9f47c3bb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\camera">
+      <UniqueIdentifier>{25ce6a46-e44c-424b-94ff-3e8821578139}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\array">
+      <UniqueIdentifier>{caf28726-d9a9-4a65-891f-e3c9a7b2e0e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\string">
+      <UniqueIdentifier>{9b47469f-1de2-4516-83b7-5a625f45f629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\entity">
+      <UniqueIdentifier>{2508b62c-23b9-4d7d-93f5-346c7bba1e5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mmath">
+      <UniqueIdentifier>{b9cdc1a3-9171-4cf8-a491-b99616dc2dad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\il2cpp\il2cpp_class">
+      <UniqueIdentifier>{52f2c74a-9d87-4e54-b216-c4fbaa2e5cad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\il2cpp\il2cpp_assembly">
+      <UniqueIdentifier>{30726c83-0a8b-483e-b201-82c0e8294f5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\il2cpp\il2cpp_image">
+      <UniqueIdentifier>{8028f63d-30a9-4d26-929f-44f4b55a5722}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\il2cpp\il2cpp_field">
+      <UniqueIdentifier>{e66488a0-96ad-44f7-bde0-7591602bad8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\il2cpp\il2cpp_method">
+      <UniqueIdentifier>{47e4f2c5-48e5-4032-be23-2ca76005cd45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\menu\custom">
+      <UniqueIdentifier>{17bf993c-cbc8-47d7-a5fa-26fd163e3c3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\il2cpp\il2cpp_icall">
+      <UniqueIdentifier>{918bc1da-ce83-474e-95f3-1a14dc428f01}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_rectpack.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_textedit.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_truetype.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\impl\imgui_impl_dx11.h">
+      <Filter>deps\imgui\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\impl\imgui_impl_win32.h">
+      <Filter>deps\imgui\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\mh.h">
+      <Filter>deps\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="dx_hook.hpp">
+      <Filter>src\hooks\dx</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\buffer.h">
+      <Filter>deps\minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\trampoline.h">
+      <Filter>deps\minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\hde32.h">
+      <Filter>deps\minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\hde64.h">
+      <Filter>deps\minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\pstdint.h">
+      <Filter>deps\minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\table32.h">
+      <Filter>deps\minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\table64.h">
+      <Filter>deps\minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.hpp">
+      <Filter>src\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="esp.hpp">
+      <Filter>src\features\esp</Filter>
+    </ClInclude>
+    <ClInclude Include="aim.hpp">
+      <Filter>src\features\aim</Filter>
+    </ClInclude>
+    <ClInclude Include="vars.hpp">
+      <Filter>src\variables</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp.hpp">
+      <Filter>src\il2cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp_header.hpp">
+      <Filter>src\il2cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="c_player_data.hpp">
+      <Filter>src\sdk\game</Filter>
+    </ClInclude>
+    <ClInclude Include="c_player_object.hpp">
+      <Filter>src\sdk\game</Filter>
+    </ClInclude>
+    <ClInclude Include="c_transform.hpp">
+      <Filter>src\sdk\unity</Filter>
+    </ClInclude>
+    <ClInclude Include="c_component.hpp">
+      <Filter>src\sdk\unity</Filter>
+    </ClInclude>
+    <ClInclude Include="info.hpp">
+      <Filter>src\info</Filter>
+    </ClInclude>
+    <ClInclude Include="mem.hpp">
+      <Filter>src\mem</Filter>
+    </ClInclude>
+    <ClInclude Include="vec3.hpp">
+      <Filter>src\sdk\unity</Filter>
+    </ClInclude>
+    <ClInclude Include="render.hpp">
+      <Filter>src\features\esp</Filter>
+    </ClInclude>
+    <ClInclude Include="fonts.hpp">
+      <Filter>src\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="fonts_data.hpp">
+      <Filter>src\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.hpp">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="c_controll.hpp">
+      <Filter>src\sdk\game</Filter>
+    </ClInclude>
+    <ClInclude Include="c_example_player.hpp">
+      <Filter>src\sdk\game</Filter>
+    </ClInclude>
+    <ClInclude Include="c_example_character.hpp">
+      <Filter>src\sdk\game</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="raycast_hook.hpp">
+      <Filter>src\hooks\raycast</Filter>
+    </ClInclude>
+    <ClInclude Include="c_controlltouch.hpp">
+      <Filter>src\sdk\game</Filter>
+    </ClInclude>
+    <ClInclude Include="vec4.hpp">
+      <Filter>src\sdk\unity</Filter>
+    </ClInclude>
+    <ClInclude Include="c_kinematic_character.hpp">
+      <Filter>src\sdk\game</Filter>
+    </ClInclude>
+    <ClInclude Include="list.hpp">
+      <Filter>src\sdk\unity</Filter>
+    </ClInclude>
+    <ClInclude Include="flyhack.hpp">
+      <Filter>src\features\movement</Filter>
+    </ClInclude>
+    <ClInclude Include="bunnyhop.hpp">
+      <Filter>src\features\movement</Filter>
+    </ClInclude>
+    <ClInclude Include="constants.hpp">
+      <Filter>src\constants</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdperson.hpp">
+      <Filter>src\features\thirdperson</Filter>
+    </ClInclude>
+    <ClInclude Include="c_example_camera.hpp">
+      <Filter>src\sdk\game</Filter>
+    </ClInclude>
+    <ClInclude Include="c_game_object.hpp">
+      <Filter>src\sdk\unity</Filter>
+    </ClInclude>
+    <ClInclude Include="c_type.hpp">
+      <Filter>src\sdk\unity</Filter>
+    </ClInclude>
+    <ClInclude Include="c_object.hpp">
+      <Filter>src\sdk\unity</Filter>
+    </ClInclude>
+    <ClInclude Include="c_collider.hpp">
+      <Filter>src\sdk\unity</Filter>
+    </ClInclude>
+    <ClInclude Include="plh_update_hook.hpp">
+      <Filter>src\hooks\plh</Filter>
+    </ClInclude>
+    <ClInclude Include="antiaims.hpp">
+      <Filter>src\features\antiaims</Filter>
+    </ClInclude>
+    <ClInclude Include="plh_move_hook.hpp">
+      <Filter>src\hooks\plh</Filter>
+    </ClInclude>
+    <ClInclude Include="send_pos_hook.hpp">
+      <Filter>src\hooks\client</Filter>
+    </ClInclude>
+    <ClInclude Include="c_shooter.hpp">
+      <Filter>src\sdk\game</Filter>
+    </ClInclude>
+    <ClInclude Include="weapons.hpp">
+      <Filter>src\features\weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="chams.hpp">
+      <Filter>src\features\chams</Filter>
+    </ClInclude>
+    <ClInclude Include="c_renderer.hpp">
+      <Filter>src\sdk\unity</Filter>
+    </ClInclude>
+    <ClInclude Include="c_material.hpp">
+      <Filter>src\sdk\unity</Filter>
+    </ClInclude>
+    <ClInclude Include="c_shader.hpp">
+      <Filter>src\sdk\unity</Filter>
+    </ClInclude>
+    <ClInclude Include="c_base_item_info.hpp">
+      <Filter>src\sdk\game</Filter>
+    </ClInclude>
+    <ClInclude Include="c_camera.hpp">
+      <Filter>src\sdk\unity\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="string.hpp">
+      <Filter>src\sdk\unity\string</Filter>
+    </ClInclude>
+    <ClInclude Include="c_array.hpp">
+      <Filter>src\sdk\unity\array</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.hpp">
+      <Filter>src\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="mmath.hpp">
+      <Filter>src\mmath</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp_assembly.hpp">
+      <Filter>src\il2cpp\il2cpp_assembly</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp_class.hpp">
+      <Filter>src\il2cpp\il2cpp_class</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp_field.hpp">
+      <Filter>src\il2cpp\il2cpp_field</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp_image.hpp">
+      <Filter>src\il2cpp\il2cpp_image</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp_method.hpp">
+      <Filter>src\il2cpp\il2cpp_method</Filter>
+    </ClInclude>
+    <ClInclude Include="common.hpp">
+      <Filter>src\il2cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="render_queue.hpp">
+      <Filter>src\features\esp</Filter>
+    </ClInclude>
+    <ClInclude Include="elements.hpp">
+      <Filter>src\menu\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="animation.hpp">
+      <Filter>src\menu\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp_icall.hpp">
+      <Filter>src\il2cpp\il2cpp_icall</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="minhook\src\dll_res\MinHook.def">
+      <Filter>deps\minhook\src</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="cheat.rc" />
+  </ItemGroup>
+</Project>
