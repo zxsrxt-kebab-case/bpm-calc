@@ -42,7 +42,7 @@ default constole LoadLibrary injector, with device unban
 # Demo pic
 
 ![Demo](blockpost_mobile_template/img/demo.jpg)
-![Demo2](blockpost_mobile_template/img/demo2.jpg)
+![Demo2](blockpost_mobile_template/img/demo2.png)
 
 read license ^_^
 
