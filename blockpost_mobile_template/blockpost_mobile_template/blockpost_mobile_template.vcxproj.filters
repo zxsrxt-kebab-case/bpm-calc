@@ -143,14 +143,17 @@
     <ClCompile Include="il2cpp_method.cpp">
       <Filter>src\il2cpp\il2cpp_method</Filter>
     </ClCompile>
-    <ClCompile Include="render_queue.cpp">
-      <Filter>src\features\esp</Filter>
-    </ClCompile>
     <ClCompile Include="elements.cpp">
       <Filter>src\menu\custom</Filter>
     </ClCompile>
     <ClCompile Include="animation.cpp">
       <Filter>src\menu\custom</Filter>
+    </ClCompile>
+    <ClCompile Include="il2cpp_delegate.cpp">
+      <Filter>src\il2cpp\il2cpp_delegate</Filter>
+    </ClCompile>
+    <ClCompile Include="globals.cpp">
+      <Filter>src\globals</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -279,6 +282,15 @@
     </Filter>
     <Filter Include="src\il2cpp\il2cpp_icall">
       <UniqueIdentifier>{918bc1da-ce83-474e-95f3-1a14dc428f01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\il2cpp\il2cpp_delegate">
+      <UniqueIdentifier>{cbb65824-e058-4223-9021-53dad1ca3c0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ordered_map">
+      <UniqueIdentifier>{fa46826e-342e-4e0f-9231-7f5b4b0d1a9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\globals">
+      <UniqueIdentifier>{ac2f75fe-c28b-4bc1-9412-95d1df80a8b2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -502,9 +514,6 @@
     <ClInclude Include="common.hpp">
       <Filter>src\il2cpp</Filter>
     </ClInclude>
-    <ClInclude Include="render_queue.hpp">
-      <Filter>src\features\esp</Filter>
-    </ClInclude>
     <ClInclude Include="elements.hpp">
       <Filter>src\menu\custom</Filter>
     </ClInclude>
@@ -513,6 +522,15 @@
     </ClInclude>
     <ClInclude Include="il2cpp_icall.hpp">
       <Filter>src\il2cpp\il2cpp_icall</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp_delegate.hpp">
+      <Filter>src\il2cpp\il2cpp_delegate</Filter>
+    </ClInclude>
+    <ClInclude Include="ordered_map.hpp">
+      <Filter>src\ordered_map</Filter>
+    </ClInclude>
+    <ClInclude Include="globals.hpp">
+      <Filter>src\globals</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -58,6 +58,10 @@ namespace menu
 					if ( ImGui::BeginTabItem( "esp" ) )
 					{
 						elements::checkbox( "esp", &variables::esp );
+						elements::checkbox( "box", &variables::elements::box );
+						elements::checkbox( "health", &variables::elements::health );
+						elements::checkbox( "name", &variables::elements::name );
+						elements::checkbox( "weapon", &variables::elements::weapon );
 						elements::checkbox( "team check", &variables::teamcheck );
 						ImGui::EndTabItem( );
 					}

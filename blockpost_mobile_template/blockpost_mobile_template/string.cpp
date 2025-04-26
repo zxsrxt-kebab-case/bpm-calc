@@ -2,6 +2,8 @@
 #include <cstring>
 
 std::string ustring::get_string( ) {
+    if ( !this )
+        return "";
     std::u16string ss( ( char16_t* ) chars, 0, length );
     std::string str = utf16le_to_utf8( ss );
     return str;

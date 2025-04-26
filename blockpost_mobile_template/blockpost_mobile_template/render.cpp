@@ -6,16 +6,20 @@
 
 //#include "utils.hpp"
 
-namespace esp
+namespace render
 {
-	namespace draw
+	namespace fun
 	{
-        void draw_text( ImFont* font, float size, const ImVec2& pos, ImU32 textColor, const char* text, bool outline = false, float outlineThickness = 1.0f, ImDrawList* drawList = ImGui::GetBackgroundDrawList( ) ) {
+        void draw_text( ImFont* font, float size, const ImVec2& pos, ImU32 textColor, const char* text, bool outline = false, float outlineThickness = 1.0f, ImDrawList* drawList = ImGui::GetBackgroundDrawList( ) )
+        {
             if ( outline )
             {
-                for ( float x = -outlineThickness; x <= outlineThickness; x += 1.0f ) {
-                    for ( float y = -outlineThickness; y <= outlineThickness; y += 1.0f ) {
-                        if ( x != 0.0f || y != 0.0f ) {
+                for ( float x = -outlineThickness; x <= outlineThickness; x += 1.0f )
+                {
+                    for ( float y = -outlineThickness; y <= outlineThickness; y += 1.0f )
+                    {
+                        if ( x != 0.0f || y != 0.0f )
+                        {
                             drawList->AddText( font, size, ImVec2( pos.x + x, pos.y + y ), ImColor( 0, 0, 0 ), text );
                         }
                     }
@@ -53,10 +57,9 @@ namespace esp
             auto textsize = fonts::tahoma_bold->CalcTextSizeA( 12, FLT_MAX, 0.f, name.c_str( ) );
             draw_text( fonts::tahoma_bold, 12, { rect.GetCenter( ).x - textsize.x / 2, rect.Max.y }, color, name.c_str( ), outline );
         }
-        void health( ImRect rect, int hp, int armor, ImU32 color, bool outline ) {
+        void health( ImRect rect, int hp, ImU32 color, bool outline ) {
             auto draw = ImGui::GetBackgroundDrawList( );
             float mult = std::clamp( hp, 0, 100 ) / 100.f;
-            float armor_mult = std::clamp( armor, 0, 100 ) / 100.f;
 
             ImColor hpcolor = color_lerp( ImColor( 255, 0, 0 ), ImColor( 0, 255, 0 ), mult );
 
@@ -79,16 +82,6 @@ namespace esp
 
             float height = roundf(std::min( rect.GetHeight( ) * mult, bg_max.y - bg_min.y ));
             ImVec2 gradient_min = ImVec2( roundf(bg_min.x), roundf( bg_max.y - height ) );
-
-            float armor_height = roundf( std::min( rect.GetHeight( ) * armor_mult, bg_max.y - bg_min.y ) );
-            ImVec2 armor_min = ImVec2( roundf(bg_min.x), roundf( bg_max.y - armor_height ) );
-
-
-            draw->AddRectFilled(
-                armor_min,
-                bg_max,
-                ImColor( 0, 0, 255, 255 )
-            );
 
             draw->AddRectFilledMultiColor(
                 gradient_min,

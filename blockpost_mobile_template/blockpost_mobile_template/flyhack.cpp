@@ -6,6 +6,9 @@
 #include "c_controll.hpp"
 #include "entity.hpp"
 
+
+//thx for mindcodd3r ^_^ my bestieeee
+
 namespace flyhack
 {
 	void run( )

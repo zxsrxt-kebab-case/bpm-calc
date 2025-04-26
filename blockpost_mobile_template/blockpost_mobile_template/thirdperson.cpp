@@ -86,6 +86,7 @@ namespace thirdperson
 		
 		c_shooter::cs( )->hands_pos( ) = variables::thirdperson ? vec3_t{ 0, 666, 0 } : vec3_t{ 0, 0, 0 };
 		camera->target_distance( ) = target_distance;
+		//player->camera_follow_y( ) = 5.f;
 	}
 }
 

@@ -79,4 +79,8 @@ public:
 	{
 		return *reinterpret_cast< bool* >( ( uintptr_t ) this + 0xB8 );
 	}
+	float& camera_follow_y( )
+	{
+		return *reinterpret_cast< float* >( ( uintptr_t ) this + 0x108 );
+	}
 };

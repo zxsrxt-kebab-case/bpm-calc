@@ -5,6 +5,7 @@
 
 #include "il2cpp_assembly.hpp"
 #include "il2cpp_icall.hpp"
+#include "il2cpp_delegate.hpp"
 
 namespace il2cpp
 {

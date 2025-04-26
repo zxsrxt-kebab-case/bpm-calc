@@ -3,6 +3,13 @@
 namespace variables
 {
 	bool esp = false;
+	namespace elements
+	{
+		bool box = false;
+		bool health = false;
+		bool name = false;
+		bool weapon = false;
+	}
 	bool teamcheck = false;
 	bool silent = false;
 	bool psilent = false;

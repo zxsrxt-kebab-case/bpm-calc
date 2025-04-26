@@ -13,7 +13,7 @@ public:
 	template< auto hk, typename orig_t>
 	static void hook( uintptr_t addr, orig_t* orig )
 	{
-		if ( orig )
+		if ( !*orig )
 		{
 			*orig = *reinterpret_cast< orig_t* > ( addr );
 		}

@@ -5,6 +5,13 @@
 namespace variables
 {
 	extern bool esp;
+	namespace elements
+	{
+		extern bool box;
+		extern bool health;
+		extern bool name;
+		extern bool weapon;
+	}
 	extern bool teamcheck;
 	extern bool silent;
 	extern bool psilent;
