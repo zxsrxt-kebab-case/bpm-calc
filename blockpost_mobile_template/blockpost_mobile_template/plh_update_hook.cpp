@@ -15,6 +15,8 @@
 #include "weapons.hpp"
 #include "chams.hpp"
 #include "entity.hpp"
+#include "globals.hpp"
+#include "esp.hpp"
 
 namespace plh_update_hook
 {
@@ -28,14 +30,20 @@ namespace plh_update_hook
 		weapons::run( );
 		chams::run( );
 
-
-		auto local = entities::get_local( entities::get_players( ) );
-		if ( local )
+		auto players = entities::get_players( );
+		if ( players )
 		{
-			globals::camera_position = variables::thirdperson ? local->object( )->bones( )->to_vec( )[ 3 ]->get_position( ) :
-				c_camera::get_main( )->get_transform( )->get_position( );
-		}
+			auto local = entities::get_local( players );
+			if ( local )
+			{
+				auto camera = c_camera::get_main( );
 
+				globals::camera_position = variables::thirdperson ? local->object( )->bones( )->m_it[ 3 ]->get_position( ) :
+					camera->get_transform( )->get_position( );
+
+				esp::push( local, players, camera );
+			}
+		}
 
 		o_update( inst );
 	}

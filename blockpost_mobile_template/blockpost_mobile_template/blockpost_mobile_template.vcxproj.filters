@@ -155,6 +155,9 @@
     <ClCompile Include="globals.cpp">
       <Filter>src\globals</Filter>
     </ClCompile>
+    <ClCompile Include="viewmodel.cpp">
+      <Filter>src\features\viewmodel</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -291,6 +294,9 @@
     </Filter>
     <Filter Include="src\globals">
       <UniqueIdentifier>{ac2f75fe-c28b-4bc1-9412-95d1df80a8b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\viewmodel">
+      <UniqueIdentifier>{9af9d995-bebf-44b3-94c9-92f255edd21b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -531,6 +537,9 @@
     </ClInclude>
     <ClInclude Include="globals.hpp">
       <Filter>src\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="viewmodel.hpp">
+      <Filter>src\features\viewmodel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

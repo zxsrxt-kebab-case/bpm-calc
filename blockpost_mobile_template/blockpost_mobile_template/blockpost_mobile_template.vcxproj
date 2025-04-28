@@ -412,6 +412,7 @@
     <ClCompile Include="thirdperson.cpp" />
     <ClCompile Include="utils.cpp" />
     <ClCompile Include="vars.cpp" />
+    <ClCompile Include="viewmodel.cpp" />
     <ClCompile Include="visual.cpp" />
     <ClCompile Include="weapons.cpp" />
   </ItemGroup>
@@ -495,6 +496,7 @@
     <ClInclude Include="vars.hpp" />
     <ClInclude Include="vec3.hpp" />
     <ClInclude Include="vec4.hpp" />
+    <ClInclude Include="viewmodel.hpp" />
     <ClInclude Include="weapons.hpp" />
   </ItemGroup>
   <ItemGroup>

@@ -17,18 +17,18 @@ namespace render
 	class c_draw_queue
 	{
 	private:
-		ordered_map<int, std::function<void( )>> draw_data;
+		std::vector<std::function<void( )>> draw_data;
 
 	public:
 		void add( std::function<void( )> fn )
 		{
-			draw_data.insert( draw_data.size() + 1, fn );
+			draw_data.push_back( fn );
 		}
 		void draw( )
 		{
 			for ( auto element : draw_data )
 			{
-				element.second( );
+				element( );
 			}
 		}
 	};

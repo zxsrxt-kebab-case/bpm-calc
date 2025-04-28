@@ -2,11 +2,8 @@
 
 #include "vars.hpp"
 #include "il2cpp.hpp"
-#include "c_array.hpp"
 #include "entity.hpp"
 
-#include "c_camera.hpp"
-#include "c_player_data.hpp"
 #include "c_controll.hpp"
 
 #include "imgui/imgui.h"
@@ -23,7 +20,7 @@
 
 namespace esp
 {
-	void draw_single( c_player_data* player, c_camera* camera, ImDrawList* draw )
+	void draw_single( c_player_data* player, c_camera* camera )
 	{
 		if ( !player )
 			return;
@@ -63,41 +60,28 @@ namespace esp
 		}
 
 		//box
-		if(variables::elements::box) que.add( [ rect ]( ) {render::fun::box( rect, ImColor( 255, 255, 255 ), true ); } );
+		if ( variables::elements::box ) que.add( [ rect ]( ) {render::fun::box( rect, ImColor( 255, 255, 255 ), true ); } );
 
 		//health
 		if ( variables::elements::health ) que.add( [ rect, health ]( ) { render::fun::health( rect, health, ImColor( 255, 255, 255 ), true ); } );
-			
+
 		//nickname
 		if ( variables::elements::name ) que.add( [ rect, m_name ]( ) { render::fun::nickname( rect, m_name, ImColor( 255, 255, 255 ), true ); } );
-		
+
 		//weapon
 		if ( variables::elements::weapon ) que.add( [ rect, m_wname ]( ) { render::fun::weapon( rect, m_wname, ImColor( 255, 255, 255 ), true ); } );
 
 		g_ctx.draw.add( que );
 	}
 
-	void run( )
+	void push( c_player_data* local, c_array<c_player_data*>* players, c_camera* camera )
 	{
-		if ( !variables::esp )
-			return;
-		auto draw = ImGui::GetBackgroundDrawList( );
-
-		auto players = entities::get_players( );
-		if ( !players )
-			return;
-
-		auto local = entities::get_local( players );
-		if ( !local )
-			return;
-
-		auto camera = c_camera::get_main( );
-		if ( !camera )
+		if ( !camera || !players || !local )
 			return;
 
 		int local_team = local->team( );
 
-		for ( const auto& player : *players)
+		for ( const auto& player : *players )
 		{
 			if ( !player )
 				continue;
@@ -114,8 +98,15 @@ namespace esp
 					continue;
 			}
 
-			draw_single( player, camera, draw );
+			draw_single( player, camera );
 		}
+	}
+
+	void run( )
+	{
+		if ( !variables::esp )
+			return;
+		auto draw = ImGui::GetBackgroundDrawList( );
 
 		g_ctx.draw.send( );
 	}
