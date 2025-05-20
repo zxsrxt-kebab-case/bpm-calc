@@ -16,5 +16,11 @@ public:
 	il2cpp_field* get_field( std::string name );
 	il2cpp_method* get_method( std::string name, int params = 0 );
 	il2cpp_method* get_method( std::string name, std::initializer_list<std::string> params = { } );
+
+	template<typename T = void*>
+	T new_object( )
+	{
+		return reinterpret_cast< T( * ) ( il2cpp_class* ) >( IAPI( "il2cpp_object_new" ) )( this );
+	}
 };
 

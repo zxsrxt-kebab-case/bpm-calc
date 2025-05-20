@@ -17,6 +17,11 @@ public:
 	{
 		return reinterpret_cast< c_shader * ( * )( c_material* ) >( il2cpp::resolve_icall( "UnityEngine.Material::get_shader" ) )( this );
 	}
+	void set_texture( const char* prop, void* tex )
+	{
+		static auto method = il2cpp_assembly::open( "UnityEngine.CoreModule" )->image( )->get_class( "UnityEngine", "Material" )->get_method( "SetTexture", { "name", "value" } );
+		if ( method )reinterpret_cast< void( * )( c_material*, ustring*, void* ) >( method->get_method_pointer( ) )( this, il2cpp::string_new( prop ), tex );
+	}	
 	void set_color( const char* prop, ImColor col )
 	{
 		static auto method = il2cpp_assembly::open( "UnityEngine.CoreModule" )->image( )->get_class( "UnityEngine", "Material" )->get_method( "SetColor", { "name", "value" } );

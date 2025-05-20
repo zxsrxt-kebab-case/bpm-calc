@@ -3,13 +3,13 @@
 #include "constants.hpp"
 #include <ranges>
 
-c_array<c_player_data*>* entities::get_players( )
+il2cpp_array<c_player_data*>* entities::get_players( )
 {
 	static il2cpp_field* fld = il2cpp_assembly::open( "Assembly-CSharp" )->image( )->get_class( "", "PLH" )->get_field( constants::plh::player );
-
-	return fld->get_static_value< c_array<c_player_data*>* >( );
+	if ( !fld ) return nullptr;
+	return fld->get_static_value< il2cpp_array<c_player_data*>* >( );
 }
-c_player_data* entities::get_local( c_array<c_player_data*>* players )
+c_player_data* entities::get_local( il2cpp_array<c_player_data*>* players )
 {
 	if ( !players )	return nullptr;
 

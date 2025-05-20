@@ -32,10 +32,9 @@ namespace flyhack
 		auto store = character->storepos( );
 		if ( !store )
 			return;
-
-		auto urray = store->unity_array( );
+		
 		auto transpos = character->motor( )->transient_position( );
-		for ( auto& item : urray->to_vec( ) )
+		for ( auto& item : store->to_vec( ) )
 		{
 			item = { transpos.x, transpos.z, transpos.y };
 		}

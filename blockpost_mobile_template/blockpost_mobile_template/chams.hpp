@@ -10,5 +10,9 @@ namespace chams
 	{
 		extern void run( );
 	}
+	namespace nightmode
+	{
+		extern void run( );
+	}
 	extern void run( );
 }

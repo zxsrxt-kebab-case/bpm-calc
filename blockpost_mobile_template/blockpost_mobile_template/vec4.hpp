@@ -1,20 +1,14 @@
 #pragma once
 #include "vec3.hpp"
-#define SMALL_FLOAT 0.0000000001
+#define SMALL_FLOAT 0.0000000001f
 #define PI 3.14159265358979323846264338327950288419716939937510f
-#define Deg2Rad (2.f * M_PI / 360.f)
-#define Rad2Deg (1.f / Deg2Rad)
+#define Deg2Rad (float)(2.f * M_PI / 360.f)
+#define Rad2Deg (float)(1.f / Deg2Rad)
 #include <string>
 struct vec4_t
 {
-    union
-    {
-        struct
-        {
-            float x, y, z, w;
-        };
-        float data[ 4 ];
-    };
+    float x, y, z, w;
+
     inline vec4_t( ) : x( 0 ), y( 0 ), z( 0 ), w( 1 )
     { };
     inline vec4_t( float data[ ] ) : x( data[ 0 ] ), y( data[ 1 ] ), z( data[ 2 ] ), w( data[ 3 ] )

@@ -4,7 +4,6 @@
 #include "imgui/imgui.h"
 #include "imgui/imgui_internal.h"
 
-#include "entity.hpp"
 #include "vars.hpp"
 #include "info.hpp"
 #include "utils.hpp"
@@ -12,6 +11,8 @@
 #include "c_controll.hpp"
 #include "c_controlltouch.hpp"
 #include "mmath.hpp"
+#include "render.hpp"
+#include "globals.hpp"
 
 #include <math.h>
 #include <cmath>
@@ -25,9 +26,10 @@ namespace silent
 	float attached_rx, attached_ry;
 	vec3_t pos;
 	bool shoot;
-	bool visible( vec3_t left, vec3_t right, int lm )
+	static bool visible( vec3_t left, vec3_t right, int lm )
 	{
-		struct RaycastHit {
+		struct RaycastHit
+		{
 			vec3_t Point, Normal;
 			unsigned int FaceID;
 			float Distance;
@@ -38,14 +40,9 @@ namespace silent
 		return reinterpret_cast< bool ( * )( vec3_t, vec3_t, RaycastHit*, int ) >( mem::game_assembly + 0x234FBF0 )( left, right, &hit, lm );
 	}
 
-	c_player_data* select_player_crosshair( )
+	static c_player_data* select_player_crosshair( il2cpp_array<c_player_data*>* players, int local_team )
 	{
-		auto players = entities::get_players( );
 		if ( !players )
-			return nullptr;
-
-		auto local = entities::get_local( players );
-		if ( !local )
 			return nullptr;
 
 		auto camera = c_camera::get_main( );
@@ -55,7 +52,7 @@ namespace silent
 		c_player_data* ret = nullptr;
 		float max_distance = 1000.f;
 
-		for ( const auto& player : players->to_vec( ) )
+		for ( const auto& player : *players )
 		{
 			if ( !player )
 				continue;
@@ -66,9 +63,9 @@ namespace silent
 			if ( player->islocal( ) )
 				continue;
 
-			if (variables::teamcheck)
+			if ( variables::teamcheck )
 			{
-				if (player->team() == local->team())
+				if ( player->team( ) == local_team )
 					continue;
 			}
 
@@ -94,7 +91,7 @@ namespace silent
 		return ret;
 	}
 
-	vec3_t calc_angle( const vec3_t& cam_pos, const vec3_t& world_pos )
+	static vec3_t calc_angle( const vec3_t& cam_pos, const vec3_t& world_pos )
 	{
 		vec3_t dir = world_pos - cam_pos;
 
@@ -108,26 +105,9 @@ namespace silent
 		}
 
 		return { dir.x, pitch, dir.z };
-	}	
-	ImVec2 calc_angle_spos( const vec3_t& cam_pos, const vec3_t& world_pos )
-	{
-		vec3_t dir = world_pos - cam_pos;
-
-		float dist = vec3_t::Distance( cam_pos, world_pos );
-
-		float pitch = rad2deg( -asinf( dir.y / dist ) );
-
-		if ( pitch < 0 )
-		{
-			pitch += 360;
-		}
-
-		float yaw = rad2deg( -atan2f( dir.x, -dir.z ) );
-
-		return { -yaw, pitch };
 	}
 
-	void run( )
+	void run( il2cpp_array<c_player_data*>* players, int local_team )
 	{
 		if ( !variables::silent && !variables::psilent )
 			return;
@@ -142,11 +122,11 @@ namespace silent
 			}
 		}
 
-		auto target = select_player_crosshair( );
+		auto target = select_player_crosshair( players, local_team );
 		if ( !target )
 			return;
 
-		auto target_pos = target->object( )->bones( )->to_vec( )[ 3 ]->get_position( );
+		auto target_pos = target->object( )->bones( )->m_it[ 3 ]->get_position( );
 
 		if ( variables::autoscope )
 		{
@@ -167,11 +147,13 @@ namespace silent
 
 		if ( variables::psilent )
 		{
-			auto calc = calc_angle( globals::camera_position, target_pos );
-			player->look_input_vec( ) = vec3_t( calc.y, 0, 0 );
-			player->_look_input_vec( ) = vec3_t( calc.x, 0, calc.z );
+			g_ctx.callbacks.add( { callback_type::render, [ player, target_pos ]( ) {
+				auto calc = calc_angle( globals::camera_position, target_pos );
+				player->look_input_vec( ) = vec3_t( calc.y, 0, 0 );
+				player->_look_input_vec( ) = vec3_t( calc.x, 0, calc.z );
+			} } );
 		}
-		
+
 		if ( variables::silent )
 		{
 			pos = target_pos;

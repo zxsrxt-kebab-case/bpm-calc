@@ -5,6 +5,8 @@
 #include "plh_update_hook.hpp"
 #include "plh_move_hook.hpp"
 #include "send_pos_hook.hpp"
+#include "example_player_hook.hpp"
+#include "send_attackv2_hook.hpp"
 
 #include "menu.hpp"
 #include "il2cpp.hpp"
@@ -92,6 +94,7 @@ HRESULT __stdcall hkPresent( IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT
 	ImGui::NewFrame( );
 
 	menu::run( );
+	
 	ImGui::Render( );
 
 	pContext->OMSetRenderTargets( 1, &mainRenderTargetView, NULL );
@@ -99,7 +102,7 @@ HRESULT __stdcall hkPresent( IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT
 	return oPresent( pSwapChain, SyncInterval, Flags );
 }
 
-void init_all( )
+static void init_all( )
 {
 	std::this_thread::sleep_for( std::chrono::seconds( 1 ) );
 	mem::init( );
@@ -110,6 +113,8 @@ void init_all( )
 	plh_update_hook::hook( );
 	plh_move_hook::hook( );
 	send_pos_hook::hook( );
+	example_player_hook::hook( );
+	send_attackv2_hook::hook( );
 }
 
 DWORD WINAPI MainThread( LPVOID lpReserved )

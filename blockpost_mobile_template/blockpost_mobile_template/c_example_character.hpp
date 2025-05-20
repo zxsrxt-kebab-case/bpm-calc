@@ -2,7 +2,7 @@
 #include "vec3.hpp"
 #include <cstdint>
 #include "c_kinematic_character.hpp"
-#include "list.hpp"
+#include "il2cpp_list.hpp"
 
 class c_example_character : public c_component
 {
@@ -55,9 +55,9 @@ public:
 	{
 		return *reinterpret_cast< c_kinematic_character** >( ( uintptr_t ) this + 0x18 );
 	}
-	ulist<vec3_t>* storepos( )
+	il2cpp_list<vec3_t>* storepos( )
 	{
-		return *reinterpret_cast< ulist<vec3_t>** >( ( uintptr_t ) this + 0x148 );
+		return *reinterpret_cast< il2cpp_list<vec3_t>** >( ( uintptr_t ) this + 0x148 );
 	}
 	int& bitmask( )
 	{

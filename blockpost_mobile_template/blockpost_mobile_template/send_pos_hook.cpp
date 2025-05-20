@@ -5,13 +5,19 @@
 #include "aim.hpp"
 #include "constants.hpp"
 #include "minhook/mh.h"
+#include "globals.hpp"
 #include "Windows.h"
 #include <random>
 
+
 namespace send_pos_hook
 {
-	void (*send_pos_o)(uintptr_t client, float xx, float xy, float xz, float lx, float ly, unsigned char bitmask);
-	void send_pos_h(uintptr_t client, float xx, float xy, float xz, float lx, float ly, unsigned char bitmask)
+
+	vec3_t xxx = vec3_t::Zero( );
+	bool cancel = false;
+
+	void (*send_pos_o)(void* client, float xx, float xy, float xz, float lx, float ly, unsigned char bitmask);
+	void send_pos_h(void* client, float xx, float xy, float xz, float lx, float ly, unsigned char bitmask)
 	{
 		if ( variables::flyhack || variables::antiaims::fakeduck )
 		{
@@ -35,9 +41,24 @@ namespace send_pos_hook
 				delta = 0.0f;
 			}
 		}
-		silent::attached_rx = lx;
-		silent::attached_ry = ly;
-		send_pos_o(client, xx, xy, xz, lx, ly, bitmask);
+
+		g_ctx.callbacks.call( callback_type::send_pos );
+		g_ctx.callbacks.erase_all( callback_type::send_pos );
+		xxx.x = xx, xxx.y = xy, xxx.z = xz;
+
+		/*
+		if ( !cancel )
+		{
+			send_pos_o( client, xx, xy, xz, lx, ly, bitmask );
+		}
+		else
+		{
+			cancel = false;
+			return;
+		}
+		*/
+
+		send_pos_o( client, xx, xy, xz, lx, ly, bitmask );
 	}
 
 	void hook()

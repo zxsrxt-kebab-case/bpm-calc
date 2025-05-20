@@ -22,8 +22,8 @@ namespace raycast_hook
 		float m_uv[ 2 ];
 		int m_collider;
 	};
-	bool( *o_raycast )( void*& scene, ray_t& ray, float max_distance, raycast_hit_t& hit, int lm, int interact );
-	bool h_raycast( void*& scene, ray_t& ray, float max_distance, raycast_hit_t& hit, int lm, int interact )
+	bool( *o_raycast )( void*& scene, ray_t& ray, float max_distance, raycast_hit_t& hit, int32_t lm, uint8_t interact );
+	bool h_raycast( void*& scene, ray_t& ray, float max_distance, raycast_hit_t& hit, int32_t lm, uint8_t interact )
 	{
 		if ( silent::shoot )
 		{

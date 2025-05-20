@@ -14,7 +14,7 @@ namespace render
 		extern void weapon( ImRect rect, std::string name, ImU32 color, bool outline = true );
 		extern void health( ImRect rect, int hp, ImU32 color, bool outline = true );
 	}
-	class c_draw_queue
+	class c_draw_queue //deprecated
 	{
 	private:
 		std::vector<std::function<void( )>> draw_data;
@@ -32,7 +32,7 @@ namespace render
 			}
 		}
 	};
-	class c_draw
+	class c_draw //deprecated
 	{
 	private:
 		std::vector<c_draw_queue> draw_queue;

@@ -364,9 +364,11 @@
   <ItemGroup>
     <ClCompile Include="aim.cpp" />
     <ClCompile Include="animation.cpp" />
+    <ClCompile Include="callbacks.cpp" />
     <ClCompile Include="c_camera.cpp" />
     <ClCompile Include="elements.cpp" />
     <ClCompile Include="entity.cpp" />
+    <ClCompile Include="example_player_hook.cpp" />
     <ClCompile Include="globals.cpp" />
     <ClCompile Include="il2cpp_assembly.cpp" />
     <ClCompile Include="il2cpp_class.cpp" />
@@ -375,6 +377,8 @@
     <ClCompile Include="il2cpp_image.cpp" />
     <ClCompile Include="il2cpp_method.cpp" />
     <ClCompile Include="mmath.cpp" />
+    <ClCompile Include="nightmode.cpp" />
+    <ClCompile Include="send_attackv2_hook.cpp" />
     <ClCompile Include="silent_aim.cpp" />
     <ClCompile Include="bunnyhop.cpp" />
     <ClCompile Include="chams.cpp" />
@@ -420,8 +424,9 @@
     <ClInclude Include="aim.hpp" />
     <ClInclude Include="animation.hpp" />
     <ClInclude Include="antiaims.hpp" />
+    <ClInclude Include="callbacks.hpp" />
     <ClInclude Include="common.hpp" />
-    <ClInclude Include="c_array.hpp" />
+    <ClInclude Include="il2cpp_array.hpp" />
     <ClInclude Include="bunnyhop.hpp" />
     <ClInclude Include="chams.hpp" />
     <ClInclude Include="c_base_item_info.hpp" />
@@ -448,6 +453,7 @@
     <ClInclude Include="elements.hpp" />
     <ClInclude Include="entity.hpp" />
     <ClInclude Include="esp.hpp" />
+    <ClInclude Include="example_player_hook.hpp" />
     <ClInclude Include="flyhack.hpp" />
     <ClInclude Include="fonts.hpp" />
     <ClInclude Include="fonts_data.hpp" />
@@ -470,7 +476,7 @@
     <ClInclude Include="imgui\imstb_textedit.h" />
     <ClInclude Include="imgui\imstb_truetype.h" />
     <ClInclude Include="info.hpp" />
-    <ClInclude Include="list.hpp" />
+    <ClInclude Include="il2cpp_list.hpp" />
     <ClInclude Include="mem.hpp" />
     <ClInclude Include="menu.hpp" />
     <ClInclude Include="minhook\mh.h" />
@@ -489,6 +495,7 @@
     <ClInclude Include="raycast_hook.hpp" />
     <ClInclude Include="render.hpp" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="send_attackv2_hook.hpp" />
     <ClInclude Include="send_pos_hook.hpp" />
     <ClInclude Include="string.hpp" />
     <ClInclude Include="thirdperson.hpp" />

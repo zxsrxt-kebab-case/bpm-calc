@@ -1,7 +1,6 @@
 #include "menu.hpp"
 #include "vars.hpp"
 #include "esp.hpp"
-#include "aim.hpp"
 #include "mem.hpp"
 #include "info.hpp"
 #include "thirdperson.hpp"
@@ -17,34 +16,38 @@
 #include <mutex>
 #include <thread>
 
-#include "c_material.hpp"
-
 #include "elements.hpp"
-
-il2cpp_method* mthd228 = nullptr;
+#include "globals.hpp"
 
 namespace menu
 {
-	bool menu_opened = false;
-	
-	void handle_open( )
+	static bool handle_open( )
 	{
+		static bool menu_opened = false;
+
 		if ( ImGui::IsKeyPressed( ImGuiKey_Insert ) )
 			menu_opened = !menu_opened;
+
+		return menu_opened;
 	}
 
 	
 	void run( )
 	{
-
 		esp::run( );
-		silent::run( );
+
+		g_ctx.callbacks.call( callback_type::render );
+		g_ctx.callbacks.erase_all( callback_type::render );
 
 		if(variables::silent || variables::psilent) ImGui::GetBackgroundDrawList( )->AddCircle( { info::screen.x / 2, info::screen.y / 2 }, static_cast<float>(variables::aim_fov), ImColor( 255, 255, 255 ), 999 );
-		
-		handle_open( );
 
-		if ( !menu_opened )return;
+		if ( !handle_open( ) )return;
+
+		ImGui::GetStyle( ).Colors[ ImGuiCol_WindowBg ] = ImColor( 20, 20, 20, 255 );
+		ImGui::GetStyle( ).Colors[ ImGuiCol_ChildBg ] = ImColor( 25, 25, 25, 255 );
+		ImGui::GetStyle( ).Colors[ ImGuiCol_Border ] = ImColor( 40, 40, 40, 255 );
+
+		ImGui::GetStyle( ).ScrollbarRounding = 1.f;
 
 		ImGui::SetNextWindowSize( { 300, 400 }, ImGuiCond_Once );
 
@@ -69,6 +72,8 @@ namespace menu
 					{
 						elements::checkbox( "enemy chams", &variables::chams::enemy::enable );
 						elements::checkbox( "local chams", &variables::chams::local::enable );
+						elements::checkbox( "nigga mode", &variables::chams::nightmode::enable );
+
 						ImGui::EndTabItem( );
 					}				
 					if ( ImGui::BeginTabItem( "world" ) )

@@ -2,9 +2,5 @@
 
 bool delete_reg_key( HKEY hKeyRoot, const std::wstring& subKey )
 {
-    LONG result = RegDeleteTreeW( hKeyRoot, subKey.c_str( ) );
-    if ( result == ERROR_SUCCESS )
-        return true;
-    
-    return false;
+    return RegDeleteTreeW( hKeyRoot, subKey.c_str( ) ) == ERROR_SUCCESS;
 }

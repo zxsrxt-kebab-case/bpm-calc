@@ -158,6 +158,18 @@
     <ClCompile Include="viewmodel.cpp">
       <Filter>src\features\viewmodel</Filter>
     </ClCompile>
+    <ClCompile Include="callbacks.cpp">
+      <Filter>src\globals</Filter>
+    </ClCompile>
+    <ClCompile Include="example_player_hook.cpp">
+      <Filter>src\hooks\example_player</Filter>
+    </ClCompile>
+    <ClCompile Include="send_attackv2_hook.cpp">
+      <Filter>src\hooks\client</Filter>
+    </ClCompile>
+    <ClCompile Include="nightmode.cpp">
+      <Filter>src\features\chams</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -253,9 +265,6 @@
     <Filter Include="src\sdk\unity\camera">
       <UniqueIdentifier>{25ce6a46-e44c-424b-94ff-3e8821578139}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\sdk\unity\array">
-      <UniqueIdentifier>{caf28726-d9a9-4a65-891f-e3c9a7b2e0e3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\sdk\unity\string">
       <UniqueIdentifier>{9b47469f-1de2-4516-83b7-5a625f45f629}</UniqueIdentifier>
     </Filter>
@@ -297,6 +306,45 @@
     </Filter>
     <Filter Include="src\features\viewmodel">
       <UniqueIdentifier>{9af9d995-bebf-44b3-94c9-92f255edd21b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hooks\example_player">
+      <UniqueIdentifier>{b2216bd3-bc32-4e76-af52-46194a8d9682}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\component">
+      <UniqueIdentifier>{febf1f2a-4b91-4ac9-8013-f79327c33c90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\il2cpp_array">
+      <UniqueIdentifier>{caf28726-d9a9-4a65-891f-e3c9a7b2e0e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\il2cpp_list">
+      <UniqueIdentifier>{3899a9f7-542f-47a8-b09f-b06b64d13861}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\transform">
+      <UniqueIdentifier>{23c461ad-2326-475a-b01b-8e3a9e13f984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\collider">
+      <UniqueIdentifier>{7ab744c4-4a16-48d8-8beb-7d07853bdd71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\material">
+      <UniqueIdentifier>{bba622a6-6cd8-491f-af72-6ae2dbc00d63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\game_object">
+      <UniqueIdentifier>{7743923f-7dc7-4c24-942e-6d3f9aa48b26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\object">
+      <UniqueIdentifier>{f05141fe-109e-41b4-b37e-0d50d518402c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\renderer">
+      <UniqueIdentifier>{4869e2b4-1533-4cfa-b786-e689d740508f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\shader">
+      <UniqueIdentifier>{a6a56010-8f71-4287-a6e7-42d9b924d97a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\type">
+      <UniqueIdentifier>{871b26ec-8af2-43e2-8f7a-7149e8c07ab2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\unity\structs">
+      <UniqueIdentifier>{210f5b98-ac0a-443c-83bf-0e43c60b9a1b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -375,20 +423,11 @@
     <ClInclude Include="c_player_object.hpp">
       <Filter>src\sdk\game</Filter>
     </ClInclude>
-    <ClInclude Include="c_transform.hpp">
-      <Filter>src\sdk\unity</Filter>
-    </ClInclude>
-    <ClInclude Include="c_component.hpp">
-      <Filter>src\sdk\unity</Filter>
-    </ClInclude>
     <ClInclude Include="info.hpp">
       <Filter>src\info</Filter>
     </ClInclude>
     <ClInclude Include="mem.hpp">
       <Filter>src\mem</Filter>
-    </ClInclude>
-    <ClInclude Include="vec3.hpp">
-      <Filter>src\sdk\unity</Filter>
     </ClInclude>
     <ClInclude Include="render.hpp">
       <Filter>src\features\esp</Filter>
@@ -418,14 +457,8 @@
     <ClInclude Include="c_controlltouch.hpp">
       <Filter>src\sdk\game</Filter>
     </ClInclude>
-    <ClInclude Include="vec4.hpp">
-      <Filter>src\sdk\unity</Filter>
-    </ClInclude>
     <ClInclude Include="c_kinematic_character.hpp">
       <Filter>src\sdk\game</Filter>
-    </ClInclude>
-    <ClInclude Include="list.hpp">
-      <Filter>src\sdk\unity</Filter>
     </ClInclude>
     <ClInclude Include="flyhack.hpp">
       <Filter>src\features\movement</Filter>
@@ -441,18 +474,6 @@
     </ClInclude>
     <ClInclude Include="c_example_camera.hpp">
       <Filter>src\sdk\game</Filter>
-    </ClInclude>
-    <ClInclude Include="c_game_object.hpp">
-      <Filter>src\sdk\unity</Filter>
-    </ClInclude>
-    <ClInclude Include="c_type.hpp">
-      <Filter>src\sdk\unity</Filter>
-    </ClInclude>
-    <ClInclude Include="c_object.hpp">
-      <Filter>src\sdk\unity</Filter>
-    </ClInclude>
-    <ClInclude Include="c_collider.hpp">
-      <Filter>src\sdk\unity</Filter>
     </ClInclude>
     <ClInclude Include="plh_update_hook.hpp">
       <Filter>src\hooks\plh</Filter>
@@ -475,15 +496,6 @@
     <ClInclude Include="chams.hpp">
       <Filter>src\features\chams</Filter>
     </ClInclude>
-    <ClInclude Include="c_renderer.hpp">
-      <Filter>src\sdk\unity</Filter>
-    </ClInclude>
-    <ClInclude Include="c_material.hpp">
-      <Filter>src\sdk\unity</Filter>
-    </ClInclude>
-    <ClInclude Include="c_shader.hpp">
-      <Filter>src\sdk\unity</Filter>
-    </ClInclude>
     <ClInclude Include="c_base_item_info.hpp">
       <Filter>src\sdk\game</Filter>
     </ClInclude>
@@ -493,8 +505,8 @@
     <ClInclude Include="string.hpp">
       <Filter>src\sdk\unity\string</Filter>
     </ClInclude>
-    <ClInclude Include="c_array.hpp">
-      <Filter>src\sdk\unity\array</Filter>
+    <ClInclude Include="il2cpp_array.hpp">
+      <Filter>src\sdk\unity\il2cpp_array</Filter>
     </ClInclude>
     <ClInclude Include="entity.hpp">
       <Filter>src\entity</Filter>
@@ -540,6 +552,51 @@
     </ClInclude>
     <ClInclude Include="viewmodel.hpp">
       <Filter>src\features\viewmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="callbacks.hpp">
+      <Filter>src\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="example_player_hook.hpp">
+      <Filter>src\hooks\example_player</Filter>
+    </ClInclude>
+    <ClInclude Include="send_attackv2_hook.hpp">
+      <Filter>src\hooks\client</Filter>
+    </ClInclude>
+    <ClInclude Include="c_component.hpp">
+      <Filter>src\sdk\unity\component</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp_list.hpp">
+      <Filter>src\sdk\unity\il2cpp_list</Filter>
+    </ClInclude>
+    <ClInclude Include="c_transform.hpp">
+      <Filter>src\sdk\unity\transform</Filter>
+    </ClInclude>
+    <ClInclude Include="c_collider.hpp">
+      <Filter>src\sdk\unity\collider</Filter>
+    </ClInclude>
+    <ClInclude Include="c_material.hpp">
+      <Filter>src\sdk\unity\material</Filter>
+    </ClInclude>
+    <ClInclude Include="c_game_object.hpp">
+      <Filter>src\sdk\unity\game_object</Filter>
+    </ClInclude>
+    <ClInclude Include="c_type.hpp">
+      <Filter>src\sdk\unity\type</Filter>
+    </ClInclude>
+    <ClInclude Include="c_shader.hpp">
+      <Filter>src\sdk\unity\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="c_renderer.hpp">
+      <Filter>src\sdk\unity\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="c_object.hpp">
+      <Filter>src\sdk\unity\object</Filter>
+    </ClInclude>
+    <ClInclude Include="vec3.hpp">
+      <Filter>src\sdk\unity\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="vec4.hpp">
+      <Filter>src\sdk\unity\structs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

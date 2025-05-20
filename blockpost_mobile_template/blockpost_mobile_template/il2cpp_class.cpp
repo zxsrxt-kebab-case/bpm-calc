@@ -63,7 +63,7 @@ il2cpp_method* il2cpp_class::get_method( std::string name, std::initializer_list
 {
 	if ( params.size( ) == 0 )
 		return get_method( name, 0 );
-
+	
 	auto methods = get_methods( );
 
 	auto method_matches = [ &name, &params ]( il2cpp_method* method ) {

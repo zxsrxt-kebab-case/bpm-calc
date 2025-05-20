@@ -1,7 +1,7 @@
 #pragma once
 #include "c_component.hpp"
 #include "c_game_object.hpp"
-#include "c_array.hpp"
+#include "il2cpp_array.hpp"
 
 class c_player_object
 {
@@ -10,9 +10,9 @@ public:
     {
         return *reinterpret_cast< c_transform** >( ( uintptr_t ) this + 0xF8 );
     }
-    c_array<c_transform*>* bones( )
+    il2cpp_array<c_transform*>* bones( )
     {
-        return *reinterpret_cast< c_array<c_transform*>** >( ( uintptr_t ) this + 0x100 );
+        return *reinterpret_cast< il2cpp_array<c_transform*>** >( ( uintptr_t ) this + 0x100 );
     }
     c_game_object* go( )
     {

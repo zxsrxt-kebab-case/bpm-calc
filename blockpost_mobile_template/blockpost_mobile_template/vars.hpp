@@ -38,6 +38,10 @@ namespace variables
 		namespace local
 		{
 			extern bool enable;
+		}		
+		namespace nightmode
+		{
+			extern bool enable;
 		}
 	}
 	namespace antiaims
